@@ -94,22 +94,22 @@
             switch(error.code) {
                 case error.PERMISSION_DENIED:
                 x.style.display = "block";
-                x.innerHTML = "Please accept the Location request!"
+                x.innerHTML = "Please accept the Location request! <br> Refresh the browser to try again!"
                 // console.log("User denied the request for Geolocation.")
                 break;
                 case error.POSITION_UNAVAILABLE:
                 x.style.display = "block";
-                x.innerHTML = "Location information is currently unavailable!"
+                x.innerHTML = "Location information is currently unavailable! <br> Refresh the browser to try again!"
                 // console.log("Location information is unavailable.")
                 break;
                 case error.TIMEOUT:
                 x.style.display = "block";
-                x.innerHTML = "The request has timed out, please try again!"
+                x.innerHTML = "The request has timed out, please try again! <br> Refresh the browser to try again!"
                 // console.log("The request to get user location timed out.")
                 break;
                 case error.UNKNOWN_ERROR:
                 x.style.display = "block";
-                x.innerHTML = "An unknown error occurred, please try again!"
+                x.innerHTML = "An unknown error occurred! <br> Refresh the browser to try again!"
                 // console.log("An unknown error occurred.")
                 break;
             }
