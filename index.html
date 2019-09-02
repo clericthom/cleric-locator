@@ -59,6 +59,8 @@
     <!-- Footer end -->
     <script>
 
+
+    setTimeout(function() {
         $(document).ready(function () {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -92,6 +94,7 @@
             }
 
         });
+    }, 5000);
     </script>
 
 </body>
