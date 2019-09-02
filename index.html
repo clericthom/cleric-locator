@@ -37,7 +37,7 @@
                 <i class="material-icons">my_location</i>
             </h1>
                 &nbsp;
-            <h4 id="searchText">Searching for location...</h4>
+            <h4 id="searchText" class="orange">Searching for location...</h4>
         </div>
     </div>
 
@@ -57,6 +57,7 @@
         <div class="col-sm-12">
             <h5 id="latitude"></h5>
             <h5 id="longitude"></h5>
+            <p>These details have now been forwarded on.</p>
         </div>
     </div>
 
@@ -87,25 +88,26 @@
                 document.getElementById('searchText').innerHTML = 'Location Found <i class="material-icons">done</i>';
                 document.getElementById('text').style.display = "none";
                 document.getElementById('back-text').style.backgroundImage="url(./imgs/mapimage1.jpg)";
+                $("h4").removeClass( "orange" ).addClass( "green" );
             }
 
             function showError(error) {
                 var x = document.getElementById('alert');
+                $("h4").removeClass( "orange" ).addClass( "red" );
+                document.getElementById('text').style.display = "none";
+                document.getElementById('searchText').innerHTML = 'Failed to find location <i class="material-icons">close</i>';
             switch(error.code) {
                 case error.PERMISSION_DENIED:
                 x.style.display = "block";
                 x.innerHTML = "Please accept the Location request! <br> Refresh the browser to try again!"
-                // console.log("User denied the request for Geolocation.")
                 break;
                 case error.POSITION_UNAVAILABLE:
                 x.style.display = "block";
                 x.innerHTML = "Location information is currently unavailable! <br> Refresh the browser to try again!"
-                // console.log("Location information is unavailable.")
                 break;
                 case error.TIMEOUT:
                 x.style.display = "block";
                 x.innerHTML = "The request has timed out, please try again! <br> Refresh the browser to try again!"
-                // console.log("The request to get user location timed out.")
                 break;
                 case error.UNKNOWN_ERROR:
                 x.style.display = "block";
@@ -115,7 +117,7 @@
             }
             }
         });
-    }, 5000);
+    }, 3000);
     </script>
 
 </body>

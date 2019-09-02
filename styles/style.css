@@ -504,6 +504,7 @@ button.navbar-toggler {
     background-size: cover;
     height: 60vh;
     width: 100vw;
+    padding: 0;
 }
 
 #latloninfo {
@@ -519,10 +520,10 @@ button.navbar-toggler {
 #text {
     position: absolute;
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
     -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
     animation-name: example;
-    animation-duration: 5s;
+    animation-duration: 3s;
 }
 
 div#alert {
@@ -536,22 +537,46 @@ div#alert {
     border-radius: 0;
 }
 
+#searchText.orange {
+    padding-left: 15px;
+    line-height: 35px;
+    background: #fc893e;
+    color: #552e14;
+}
+
+#searchText.green {
+    padding-left: 15px;
+    line-height: 35px;
+    background: #4CAF50;
+    color: #0d340d;
+}
+
+#searchText.red {
+    padding-left: 15px;
+    line-height: 35px;
+    background: #ff7878;
+    color: #5b1717;
+}
+
 #searchText i.material-icons {
-    color: #ffffff;
+    /* color: #4CAF50; */
     font-weight: 900;
-    background: #4caf50;
+    background: #ffffff;
     border-radius: 50%;
     font-size: 15px;
+    margin-left: 10px;
+    padding: 2px;
+    /* box-shadow: 0px 0px 5px #000000; */
 }
 
 /* Standard syntax */
 @keyframes example {
-    0%   {color:black; left:5vw; top:17vh;}
+    0%   {color:#e93e63; left:5vw; top:17vh;}
     20%  {color:#e93e63; left:88vw; top:11vh;}
-    40%  {color:black; left:10vw; top:35vh;}
+    40%  {color:#e93e63; left:10vw; top:35vh;}
     60%  {color:#e93e63; left:40vw; top:16vh;}
     80% {color:#e93e63; left:60vw; top:34vh;}
-    100% {color:black; left:5vw; top:17vh;}
+    100% {color:#e93e63; left:5vw; top:17vh;}
 }
 
 @media only screen and (max-width: 768px) {
