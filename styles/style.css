@@ -537,8 +537,11 @@ div#alert {
 }
 
 #searchText i.material-icons {
-    color: #4CAF50;
+    color: #ffffff;
     font-weight: 900;
+    background: #4caf50;
+    border-radius: 50%;
+    font-size: 15px;
 }
 
 /* Standard syntax */
