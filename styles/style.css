@@ -526,6 +526,11 @@ button.navbar-toggler {
     animation-duration: 5s;
 }
 
+#searchText i {
+    color: #4CAF50;
+    font-weight: 900;
+}
+
 /* Standard syntax */
 @keyframes example {
     0%   {color:black; left:5vw; top:17vh;}
