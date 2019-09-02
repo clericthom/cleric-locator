@@ -42,11 +42,21 @@
     </div>
 
     <!-- /Main content -->
+    <div id="alert" class="alert alert-danger" role="alert">
 
-    <div id="latloninfo" class="container-fluid">
+    </div>
+
+    <!-- <div id="latloninfo" class="container-fluid">
         <div class="col-sm-12">
             <h4 id="latitude"></h4>
             <h4 id="longitude"></h4>
+        </div>
+    </div> -->
+
+    <div id="latloninfo" class="alert alert-success" role="alert">
+        <div class="col-sm-12">
+            <h5 id="latitude"></h5>
+            <h5 id="longitude"></h5>
         </div>
     </div>
 
@@ -74,29 +84,38 @@
                 document.getElementById('latitude').innerText = 'Latitude:' + ' ' + position.coords.latitude;
                 document.getElementById('longitude').innerText = 'Longitude:' + ' ' + position.coords.longitude;
                 document.getElementById('latloninfo').style.display = "block";
+                document.getElementById('searchText').innerHTML = 'Location Found <i class="material-icons">done</i>';
+                document.getElementById('text').style.display = "none";
+                document.getElementById('back-text').style.backgroundImage="url(./imgs/mapimage1.jpg)";
             }
 
             function showError(error) {
+                var x = document.getElementById('alert');
             switch(error.code) {
                 case error.PERMISSION_DENIED:
-                console.log("User denied the request for Geolocation.")
+                x.style.display = "block";
+                x.innerHTML = "Please accept the Location request!"
+                // console.log("User denied the request for Geolocation.")
                 break;
                 case error.POSITION_UNAVAILABLE:
-                console.log("Location information is unavailable.")
+                x.style.display = "block";
+                x.innerHTML = "Location information is currently unavailable!"
+                // console.log("Location information is unavailable.")
                 break;
                 case error.TIMEOUT:
-                console.log("The request to get user location timed out.")
+                x.style.display = "block";
+                x.innerHTML = "The request has timed out, please try again!"
+                // console.log("The request to get user location timed out.")
                 break;
                 case error.UNKNOWN_ERROR:
-                console.log("An unknown error occurred.")
+                x.style.display = "block";
+                x.innerHTML = "An unknown error occurred, please try again!"
+                // console.log("An unknown error occurred.")
                 break;
             }
             }
-
         });
-        document.getElementById('text').style.display = "none";
-        document.getElementById('searchText').innerHTML = 'Location Found <i class="material-icons">done</i>';
-    }, 5000);
+    }, 2000);
     </script>
 
 </body>
