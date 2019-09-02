@@ -526,7 +526,7 @@ button.navbar-toggler {
     animation-duration: 5s;
 }
 
-#searchText i {
+#searchText i.material-icons {
     color: #4CAF50;
     font-weight: 900;
 }
