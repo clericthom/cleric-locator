@@ -37,7 +37,7 @@
                 <i class="material-icons">my_location</i>
             </h1>
                 &nbsp;
-            <h4>Searching for location...</h4>
+            <h4 id="searchText">Searching for location...</h4>
         </div>
     </div>
 
@@ -95,6 +95,7 @@
 
         });
         document.getElementById('text').style.display = "none";
+        document.getElementById('searchText').innerHTML = 'Location Found <i class="material-icons">done</i>';
     }, 5000);
     </script>
 
